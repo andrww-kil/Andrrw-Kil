@@ -1,0 +1,6 @@
+[
+  {"match": ["@company.co.kr"], "action": "keep"},
+  {"match": ["googlealerts-noreply@google.com"], "action": "move", "folder": "업계뉴스"},
+  {"match": ["@temuemail.com", "@kr.email.samsung.com"], "action": "trash"},
+  {"match": ["@"], "older_than_days": 365, "action": "trash"}
+]
