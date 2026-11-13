@@ -35,9 +35,20 @@
     <category term='filter'></category>
     <title>Mail Filter</title>
     <content></content>
-    <apps:property name='from' value='uber.com OR 29cm.co.kr OR no-reply@agoda.com'/>
+    <apps:property name='from' value='uber.com OR 29cm.co.kr'/>
     <apps:property name='label' value='Receipts'/>
     <apps:property name='shouldArchive' value='true'/>
+    <apps:property name='sizeOperator' value='s_sl'/>
+    <apps:property name='sizeUnit' value='s_smb'/>
+  </entry>
+  <entry>
+    <category term='filter'></category>
+    <title>Mail Filter</title>
+    <content></content>
+    <apps:property name='from' value='no-reply@agoda.com OR agoda-messaging.com'/>
+    <apps:property name='label' value='여행'/>
+    <apps:property name='shouldAlwaysMarkAsImportant' value='true'/>
+    <apps:property name='shouldNeverSpam' value='true'/>
     <apps:property name='sizeOperator' value='s_sl'/>
     <apps:property name='sizeUnit' value='s_smb'/>
   </entry>
