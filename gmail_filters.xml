@@ -15,7 +15,7 @@
     <category term='filter'></category>
     <title>Mail Filter</title>
     <content></content>
-    <apps:property name='from' value='jobalerts-noreply@linkedin.com'/>
+    <apps:property name='from' value='jobalerts-noreply@linkedin.com OR jobs-noreply@linkedin.com OR jobs-listings@linkedin.com OR messages-noreply@linkedin.com'/>
     <apps:property name='label' value='채용알림'/>
     <apps:property name='shouldArchive' value='true'/>
     <apps:property name='sizeOperator' value='s_sl'/>
@@ -49,6 +49,27 @@
     <apps:property name='label' value='여행'/>
     <apps:property name='shouldAlwaysMarkAsImportant' value='true'/>
     <apps:property name='shouldNeverSpam' value='true'/>
+    <apps:property name='sizeOperator' value='s_sl'/>
+    <apps:property name='sizeUnit' value='s_smb'/>
+  </entry>
+  <entry>
+    <category term='filter'></category>
+    <title>Mail Filter</title>
+    <content></content>
+    <apps:property name='from' value='recmail.lg.com OR saramin.co.kr OR jobkorea.co.kr OR wanted.co.kr OR greetinghr.com OR ninehire.com OR remember.co.kr'/>
+    <apps:property name='label' value='커리어'/>
+    <apps:property name='shouldAlwaysMarkAsImportant' value='true'/>
+    <apps:property name='shouldNeverSpam' value='true'/>
+    <apps:property name='sizeOperator' value='s_sl'/>
+    <apps:property name='sizeUnit' value='s_smb'/>
+  </entry>
+  <entry>
+    <category term='filter'></category>
+    <title>Mail Filter</title>
+    <content></content>
+    <apps:property name='hasTheWord' value='from:(wooricard.com OR stripe.com OR googleplay-noreply@google.com OR payments-noreply@google.com) OR subject:(결제 OR 청구 OR 납부 OR 명세서 OR invoice OR &quot;payment failed&quot; OR 구독)'/>
+    <apps:property name='doesNotHaveTheWord' value='광고'/>
+    <apps:property name='label' value='결제·구독'/>
     <apps:property name='sizeOperator' value='s_sl'/>
     <apps:property name='sizeUnit' value='s_smb'/>
   </entry>
