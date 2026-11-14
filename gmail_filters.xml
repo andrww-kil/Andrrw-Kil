@@ -15,7 +15,7 @@
     <category term='filter'></category>
     <title>Mail Filter</title>
     <content></content>
-    <apps:property name='from' value='jobalerts-noreply@linkedin.com OR jobs-noreply@linkedin.com OR jobs-listings@linkedin.com OR messages-noreply@linkedin.com'/>
+    <apps:property name='from' value='linkedin.com OR glassdoor.com OR rocketpunch.com'/>
     <apps:property name='label' value='채용알림'/>
     <apps:property name='shouldArchive' value='true'/>
     <apps:property name='sizeOperator' value='s_sl'/>
@@ -25,7 +25,7 @@
     <category term='filter'></category>
     <title>Mail Filter</title>
     <content></content>
-    <apps:property name='from' value='businesstimes.com.sg OR medium.com OR wishket.com OR ted.com OR learn.mit.edu OR reclaim.ai OR lumosity.com'/>
+    <apps:property name='from' value='businesstimes.com.sg OR medium.com OR wishket.com OR ted.com OR learn.mit.edu OR reclaim.ai OR lumosity.com OR investingmail.com OR coursera.org OR taskade.com OR superlist.com OR craft.do OR monday.com OR asana.com OR akiflow.com OR clickup.com OR evernote.com OR gamma.app OR email.claude.com OR mail.cursor.com OR email.openai.com OR lilys.ai OR monica.im OR napkin.ai OR wrtn.io OR linermail.com OR offlight.work OR heybunny.io OR updates.notion.so OR updates.notion.com OR smartthings.com OR wconcept.co.kr OR dropbox.com'/>
     <apps:property name='label' value='읽을거리'/>
     <apps:property name='shouldArchive' value='true'/>
     <apps:property name='sizeOperator' value='s_sl'/>
@@ -67,9 +67,17 @@
     <category term='filter'></category>
     <title>Mail Filter</title>
     <content></content>
-    <apps:property name='hasTheWord' value='from:(wooricard.com OR stripe.com OR googleplay-noreply@google.com OR payments-noreply@google.com) OR subject:(결제 OR 청구 OR 납부 OR 명세서 OR invoice OR &quot;payment failed&quot; OR 구독)'/>
-    <apps:property name='doesNotHaveTheWord' value='광고'/>
+    <apps:property name='hasTheWord' value='(from:(wooricard.com OR stripe.com OR kcp.co.kr OR googleplay-noreply@google.com OR payments-noreply@google.com) OR subject:(결제 OR 청구 OR 납부 OR 명세서 OR invoice OR &quot;payment failed&quot; OR 구독)) -subject:광고 -subject:약관 -from:temu.com -from:linkedin.com'/>
     <apps:property name='label' value='결제·구독'/>
+    <apps:property name='sizeOperator' value='s_sl'/>
+    <apps:property name='sizeUnit' value='s_smb'/>
+  </entry>
+  <entry>
+    <category term='filter'></category>
+    <title>Mail Filter</title>
+    <content></content>
+    <apps:property name='from' value='no-reply@todoist.com OR noreply-accounts@google.com'/>
+    <apps:property name='shouldArchive' value='true'/>
     <apps:property name='sizeOperator' value='s_sl'/>
     <apps:property name='sizeUnit' value='s_smb'/>
   </entry>

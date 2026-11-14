@@ -18,13 +18,18 @@
 // 위에서부터 순서대로 처리합니다.
 var RULES = [
   ['in:inbox from:googlealerts-noreply@google.com', '업계뉴스', true],
-  ['in:inbox from:(jobalerts-noreply@linkedin.com OR jobs-noreply@linkedin.com OR jobs-listings@linkedin.com OR messages-noreply@linkedin.com)', '채용알림', true],
-  ['in:inbox from:(businesstimes.com.sg OR medium.com OR wishket.com OR ted.com OR learn.mit.edu OR reclaim.ai OR lumosity.com)', '읽을거리', true],
+  ['in:inbox -is:starred from:(linkedin.com OR glassdoor.com OR rocketpunch.com)', '채용알림', true],
+  ['in:inbox -is:starred from:(businesstimes.com.sg OR medium.com OR wishket.com OR ted.com OR learn.mit.edu OR reclaim.ai OR lumosity.com OR investingmail.com OR coursera.org)', '읽을거리', true],
+  ['in:inbox -is:starred from:(taskade.com OR superlist.com OR craft.do OR monday.com OR asana.com OR akiflow.com OR clickup.com OR evernote.com OR gamma.app OR email.claude.com OR mail.cursor.com OR email.openai.com)', '읽을거리', true],
+  ['in:inbox -is:starred from:(lilys.ai OR monica.im OR napkin.ai OR wrtn.io OR linermail.com OR offlight.work OR heybunny.io OR updates.notion.so OR updates.notion.com OR smartthings.com OR wconcept.co.kr OR dropbox.com)', '읽을거리', true],
+  ['in:inbox -is:starred from:(no-reply@todoist.com OR noreply-accounts@google.com)', null, true],
   ['in:inbox from:(uber.com OR 29cm.co.kr)', 'Receipts', true],
   ['in:inbox newer_than:6m from:(no-reply@agoda.com OR agoda-messaging.com) -label:여행', '여행', false],
   ['in:inbox newer_than:1y from:(recmail.lg.com OR saramin.co.kr OR jobkorea.co.kr OR wanted.co.kr OR greetinghr.com OR ninehire.com OR remember.co.kr) -label:커리어', '커리어', false],
   ['in:inbox newer_than:1y from:(wooricard.com OR stripe.com OR googleplay-noreply@google.com OR payments-noreply@google.com) -label:결제·구독', '결제·구독', false],
   ['in:inbox category:promotions -is:starred', null, true],
+  // 3개월 지난 메일은 라벨이 있어도 받은편지함에서 뺌 (라벨은 그대로 남음)
+  ['in:inbox -is:starred older_than:3m', null, true],
   // 마지막: 위에서 남긴 것(별표·여행·결제·커리어) 빼고 전부 보관
   ['in:inbox -is:starred -label:여행 -label:결제·구독 -label:커리어', null, true]
 ];
